@@ -29,7 +29,7 @@
       <reponame>HDP-UTILS</reponame>
     </repo>
     <repo>
-      <baseurl>http://mirror.ash2.symcpe.net/custrepos/lmm/6/x86_64</baseurl>
+      <baseurl>https://download.elasticsearch.org/elasticsearch/elasticsearch/</baseurl>
       <repoid>ELASTICSEARCH</repoid>
       <reponame>ELASTICSEARCH</reponame>
     </repo>
