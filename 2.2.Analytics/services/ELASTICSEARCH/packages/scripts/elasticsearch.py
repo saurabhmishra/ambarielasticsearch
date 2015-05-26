@@ -9,23 +9,25 @@ from properties_config import properties_config
 import sys
 from copy import deepcopy
 
-def bdse():
+def elasticsearch():
     import params
 
-    Directory([params.log_dir, params.pid_dir, params.conf_dir],
+    Directory(params.conf_dir,
               owner=params.es_user,
               group=params.user_group,
               recursive=True
           )
 
-    File(format("{conf_dir}/logging.yml"),
-          content=params.logging_yaml,
-	  owner=params.es_user,
-          content=InlineTemplate(params.bdse_env_sh_template)
+    File(format("{params.conf_dir}/logging.yml"),
+	mode=0644,
+        content=params.logging_yaml,
+	owner=params.es_user,
+	group=params.user_group
      )
 
-    File(format("{conf_dir}/elasticsearch.yaml"),
-        content=params.elasticsearch_yaml,
+    File(format("{params.conf_dir}/elasticsearch.yaml"),
+        mode=0644,
+	content=params.elasticsearch_yaml,
 	owner=params.es_user,
         group=params.user_group
     )

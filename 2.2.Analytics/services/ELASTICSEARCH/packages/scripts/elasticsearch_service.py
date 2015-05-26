@@ -17,12 +17,12 @@ class ELASTICSEARCHService(Script):
     def configure(self, env):
         import params
         env.set_params(params)
-        queryx()
+        elasticsearch()
 
     def start(self, env):
         import params
         env.set_params(params)
-        queryx()
+        elasticsearch()
         cmd = format("/etc/init.d/elasticsearch start")
         Execute(cmd,
                 user=params.es_user,
@@ -46,4 +46,4 @@ class ELASTICSEARCHService(Script):
                 logoutput=True)                  
 
 if __name__ == "__main__":
-    QueryXService().execute()
+    ELASTICSEARCHService().execute()

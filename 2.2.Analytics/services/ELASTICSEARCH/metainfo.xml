@@ -14,7 +14,7 @@
           <category>MASTER</category>
           <cardinality>1+</cardinality>
           <commandScript>
-            <script>scripts/es_service.py</script>
+            <script>scripts/elasticsearch_service.py</script>
             <scriptType>PYTHON</scriptType>
             <timeout>600</timeout>
           </commandScript>
