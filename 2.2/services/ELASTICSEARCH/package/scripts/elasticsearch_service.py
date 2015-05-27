@@ -13,6 +13,11 @@ class ELASTICSEARCHService(Script):
     def install(self, env):
         self.install_packages(env)
         self.configure(env)
+	print 'Install plugins';
+        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost=proxy.ash2.symcpe.net -DproxyPort=8080 --install mobz/elasticsearch-head")
+        print output
+        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost=proxy.ash2.symcpe.net -DproxyPort=8080 --install elasticsearch/elasticsearch-repository-hdfs/2.0.2")
+        print output
 
     def configure(self, env):
         import params
