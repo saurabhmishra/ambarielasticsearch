@@ -8,8 +8,8 @@ tmp_dir = Script.get_tmp_dir()
 
 conf_dir = "/etc/elasticsearch"
 
-es_user = "elasticsearch"
-user_group = "elasticsearch"
+es_user = "root"
+user_group = "root"
 
 
 logging_yaml = config['configurations']['logging']['content']

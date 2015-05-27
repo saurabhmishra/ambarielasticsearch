@@ -5,7 +5,6 @@ ElasticSearch service params.
 """
 
 from resource_management import *
-from properties_config import properties_config
 import sys
 from copy import deepcopy
 
@@ -19,14 +18,14 @@ def elasticsearch():
           )
 
     File(format("{params.conf_dir}/logging.yml"),
-	mode=0644,
+	mode=0664,
         content=params.logging_yaml,
 	owner=params.es_user,
 	group=params.user_group
      )
 
     File(format("{params.conf_dir}/elasticsearch.yaml"),
-        mode=0644,
+        mode=0664,
 	content=params.elasticsearch_yaml,
 	owner=params.es_user,
         group=params.user_group

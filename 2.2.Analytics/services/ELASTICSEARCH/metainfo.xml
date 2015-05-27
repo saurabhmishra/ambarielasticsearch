@@ -9,9 +9,20 @@
       <version>1.4.2</version>
       <components>
         <component>
-          <name>ELASTICSEARCH</name>
-          <displayName>ELASTICSEARCH Service</displayName>
+          <name>ES_MASTERS</name>
+          <displayName>es_master</displayName>
           <category>MASTER</category>
+          <cardinality>1+</cardinality>
+          <commandScript>
+            <script>scripts/elasticsearch_service.py</script>
+            <scriptType>PYTHON</scriptType>
+            <timeout>600</timeout>
+          </commandScript>
+        </component> 
+	<component>
+          <name>ES_SLAVES</name>
+          <displayName>es_slave</displayName>
+          <category>SLAVE</category>
           <cardinality>1+</cardinality>
           <commandScript>
             <script>scripts/elasticsearch_service.py</script>
