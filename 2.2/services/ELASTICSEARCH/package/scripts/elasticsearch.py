@@ -19,14 +19,14 @@ def elasticsearch():
 
     File(format("{params.conf_dir}/logging.yml"),
 	mode=0664,
-        content=params.logging_yml,
+        content=params.logging_yaml,
 	owner=params.es_user,
 	group=params.user_group
      )
 
     File(format("{params.conf_dir}/elasticsearch.yml"),
         mode=0664,
-	content=params.elasticsearch_yml,
+	content=params.elasticsearch_yaml,
 	owner=params.es_user,
         group=params.user_group
     )

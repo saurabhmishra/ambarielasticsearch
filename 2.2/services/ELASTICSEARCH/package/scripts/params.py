@@ -12,5 +12,5 @@ es_user = "root"
 user_group = "root"
 
 
-logging_yml = config['configurations']['logging']['content']
-elasticsearch_yml = config['configurations']['elasticsearch']['elasticsearchymlcontent']
+logging_yaml = config['configurations']['logging']['content']
+elasticsearch_yaml = config['configurations']['elasticsearch']['content']
