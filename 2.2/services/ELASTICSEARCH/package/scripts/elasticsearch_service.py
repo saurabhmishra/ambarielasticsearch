@@ -28,6 +28,8 @@ class ELASTICSEARCHService(Script):
         print output
         output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install elasticsearch/elasticsearch-repository-hdfs/2.0.2")
         print output
+	output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install royrusso/elasticsearch-HQ")
+	print output
 	output = os.system("mkdir /mnt/es_data")
 	print output
 	output = os.system("chown elasticsearch:elasticsearch /mnt/es_data")
