@@ -24,9 +24,9 @@ class ELASTICSEARCHService(Script):
         env.set_params(params)
         elasticsearch()
         print 'Install plugins';
-        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost=proxy.ash2.symcpe.net -DproxyPort=8080 --install mobz/elasticsearch-head")
+        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install mobz/elasticsearch-head")
         print output
-        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost=proxy.ash2.symcpe.net -DproxyPort=8080 --install elasticsearch/elasticsearch-repository-hdfs/2.0.2")
+        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install elasticsearch/elasticsearch-repository-hdfs/2.0.2")
         print output
 	output = os.system("mkdir /mnt/es_data")
 	print output
