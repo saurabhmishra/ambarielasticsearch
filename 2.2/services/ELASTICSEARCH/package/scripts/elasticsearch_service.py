@@ -26,7 +26,7 @@ class ELASTICSEARCHService(Script):
         print 'Install plugins';
         output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install mobz/elasticsearch-head")
         print output
-        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install elasticsearch/elasticsearch-repository-hdfs/2.0.2")
+        output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install elasticsearch/elasticsearch-repository-hdfs/2.1.0.Beta4-hadoop2")
         print output
 	output = os.system("/usr/share/elasticsearch/bin/plugin -DproxyHost= -DproxyPort=8080 --install royrusso/elasticsearch-HQ")
 	print output
