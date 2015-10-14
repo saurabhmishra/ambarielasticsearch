@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<metainfo>
+  <schemaVersion>2.0</schemaVersion>
+  <services>
+    <service>
+      <name>ELASTICSEARCH</name>
+      <displayName>ELASTICSEARCH</displayName>
+      <comment>ELASTICSEARCH</comment>
+      <version>1.4.2</version>
+      <components>
+        <component>
+          <name>ELASTICSEARCH</name>
+          <displayName>ELASTICSEARCH Service</displayName>
+          <category>MASTER</category>
+          <cardinality>1+</cardinality>
+          <commandScript>
+            <script>scripts/elasticsearch_service.py</script>
+            <scriptType>PYTHON</scriptType>
+            <timeout>600</timeout>
+          </commandScript>
+        </component>
+      </components>
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>any</osFamily>
+          <packages>
+            <package>
+              <name>elasticsearch</name>
+           </package>
+ 	 </packages>
+        </osSpecific>
+      </osSpecifics>
+      <configuration-dependencies>
+        <config-type>elasticsearch</config-type>
+	<config-type>logging</config-type>
+      </configuration-dependencies>
+      <restartRequiredAfterChange>true</restartRequiredAfterChange>
+    </service>
+  </services>
+</metainfo>
