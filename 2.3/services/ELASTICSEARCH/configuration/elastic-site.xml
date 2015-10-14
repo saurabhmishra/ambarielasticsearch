@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Elastic search  Configurations -->
+
+<configuration supports_final="true">
+    <!-- Health Check Configurations -->
+    <property>
+        <name>template</name>
+        <value>Welcome, %s!</value>
+        <description>Welcome template</description>
+    </property>
+    <!-- Configurations -->
+    <property>
+        <name>cluster_name</name>
+        <value>es</value>
+        <description>Cluster name identifies your cluster</description>
+    </property>
+    <property>
+        <name>node_master</name>
+        <value>true</value>
+        <description>Allow this node to be eligible as a master node</description>
+    </property>
+    <property>
+        <name>node_master1</name>
+        <value>true</value>
+        <description>Master node -1</description>
+    </property>
+    <property>
+        <name>node_master2</name>
+        <value>true</value>
+        <description>Master node -2</description>
+    </property>
+    <property>
+        <name>node_master3</name>
+        <value>true</value>
+        <description>Master node -3 </description>
+    </property>
+    <property>
+        <name>node_data</name>
+        <value>false</value>
+        <description>You want this node to only serve as a master</description>
+    </property>
+    <property>
+        <name>index_number_of_shards</name>
+        <value>5</value>
+        <description>Set the number of shards (splits) of an index</description>
+    </property>
+    <property>
+        <name>index_number_of_replicas</name>
+        <value>1</value>
+        <description>Set the number of replicas (additional copies) of an index</description>
+    </property>
+
+    <!--  Logging Configurations -->
+    <property>
+        <name>path_conf</name>
+        <value>/etc/elasticsearch/</value>
+        <description>Path to directory containing configuration</description>
+    </property>
+    <property>
+        <name>path_data</name>
+        <value>/opt/lmm/es_data</value>
+        <description>Path to directory where to store index data allocated for this node</description>
+    </property>    
+    <property>
+        <name>path_logs</name>
+        <value>/var/log/elasticsearch</value>
+        <description>Path to log files</description>
+    </property>
+    <!--  Discovery -->
+    <property>
+        <name>transport_tcp_port</name>
+        <value>9300</value>
+        <description>Set a custom port for the node to node communication</description>
+    </property>
+    <property>
+        <name>http_port</name>
+        <value>9200</value>
+        <description>Set a custom port to listen for HTTP traffic</description>
+    </property>
+    <!--  Discovery -->
+    <property>
+        <name>discovery_zen_minimum_master_nodes</name>
+        <value>3</value>
+        <description>master eligible nodes</description>
+    </property>
+    <property>
+        <name>discovery_zen_ping_multicast_enabled</name>
+        <value>false</value>
+        <description>master eligible nodes</description>
+    </property>
+    <property>
+        <name>discovery_zen_ping_timeout</name>
+        <value>3s</value>
+        <description>wait for ping responses</description>
+    </property>
+    <!--  Gateway -->
+    <property>
+        <name>recover_after_data_nodes</name>
+        <value>3</value>
+        <description>recovery process after N nodes</description>
+    </property>
+    <property>
+        <name>recover_after_time</name>
+        <value>15m</value>
+        <description>recover_after_time</description>
+    </property>
+    <property>
+        <name>expected_data_nodes</name>
+        <value>10</value>
+        <description>expected_data_nodes</description>
+    </property>
+    <!--  Index -->  
+    <property>
+        <name>index_merge_scheduler_max_thread_count</name>
+        <value>5</value>
+        <description>index.merge.scheduler.max_thread_count</description>
+    </property>
+    <property>
+        <name>index_refresh_interval</name>
+        <value>22</value>
+        <description>index refresh interval</description>
+    </property>
+    <property>
+        <name>index_translog_flush_threshold_size</name>
+        <value>5g</value>
+        <description>index_translog_flush_threshold_size</description>
+    </property>
+</configuration>
+
+
