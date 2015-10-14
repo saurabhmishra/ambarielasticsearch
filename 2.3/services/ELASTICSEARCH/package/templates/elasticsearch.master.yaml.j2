@@ -1,0 +1,22 @@
+cluster:
+  name:   {{cluster_name}} 
+discovery:
+  zen:
+    ping:
+      multicast:
+        enabled: {{discovery_zen_ping_multicast_enabled}}
+      unicast:
+        hosts:
+             - {{node_master1}} 
+             - {{node_master2}}
+             - {{node_master3}}
+node:
+  data: false
+  master: true
+  name: {{hostname}}
+path:
+  data: {{path_data}} 
+port: {{http_port}}
+transport:
+  tcp:
+    port: {{transport_tcp_port}}

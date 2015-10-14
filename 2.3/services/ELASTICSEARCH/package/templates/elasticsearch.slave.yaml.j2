@@ -1,0 +1,34 @@
+cluster:
+  name:   {{cluster_name}} 
+discovery:
+  zen:
+    ping:
+      multicast:
+        enabled: {{discovery_zen_ping_multicast_enabled}}
+      unicast:
+        hosts:
+             - {{node_master1}} 
+             - {{node_master2}}
+             - {{node_master3}}
+node:
+  data: true
+  master: false
+  name: {{hostname}}
+path:
+  data: {{path_data}} 
+port: {{http_port}}
+discovery.zen.ping.unicast.hosts:
+                           ["{{node_master1}}:{{transport_tcp_port}}","{{node_master2}}:{{transport_tcp_port}}","{{node_master3}}:{{transport_tcp_port}}"]
+transport:
+  tcp:
+    port: {{transport_tcp_port}}
+
+gateway:
+  recover_after_data_nodes: {{recover_after_data_nodes}}
+  recover_after_time: {{recover_after_time}}
+  expected_data_nodes: {{expected_data_nodes}}
+
+Index:
+  index.merge.scheduler.max_thread_count: {{index_merge_scheduler_max_thread_count}}
+  index.translog.flush_threshold_size: {{index_translog_flush_threshold_size}}
+  index.refresh_interval: {{index_refresh_interval}}
