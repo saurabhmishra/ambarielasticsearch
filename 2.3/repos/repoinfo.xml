@@ -29,7 +29,7 @@
       <reponame>HDP-UTILS</reponame>
     </repo>
     <repo>
-      <baseurl>https://download.elasticsearch.org/elasticsearch/elasticsearch/</baseurl>
+      <baseurl>http://packages.elastic.co/elasticsearch/1.7/centos</baseurl>
       <repoid>ELASTICSEARCH</repoid>
       <reponame>ELASTICSEARCH</reponame>
     </repo>
